@@ -1,0 +1,7 @@
+node_modules/
+logs
+.next/
+.idea/
+.env
+.cache
+gsscraper-frontend.iml

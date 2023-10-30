@@ -1,0 +1,68 @@
+/* Default styles for larger screens */
+.productTable {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 12px;
+}
+
+.productTable th, .productTable td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #b7b7b7;
+}
+
+.productTable .productThumbnail img {
+    max-height: 100px;
+}
+
+.hideOnFullWidth {
+    display: none;
+}
+
+.hideOnMobileWidth {
+    display: table-cell;
+}
+
+.productTable .productName {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .hideOnFullWidth {
+        display: block;
+        font-weight: 600;
+        font-size: 12px;
+    }
+
+    .hideOnMobileWidth {
+        display: none !important;
+    }
+    .productTable {
+        display: table;
+    }
+
+    .productTable thead {
+        display: none;
+    }
+
+    .productTable tr {
+        border-radius: 16px;
+        padding: 16px;
+        border: 1px solid rgb(94, 94, 94);
+        box-shadow: 0 4px 16px rgba(182, 182, 182, 0.45);
+        display: block;
+        margin-bottom: 32px;
+    }
+
+    .productTable td {
+        display: flex;
+        border: none;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .productTable .footer, .productTable .footer .hideOnFullWidth {
+        font-size: 12px;
+    }
+}
