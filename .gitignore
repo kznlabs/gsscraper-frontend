@@ -5,3 +5,4 @@ logs
 .env
 .cache
 gsscraper-frontend.iml
+.vercel
