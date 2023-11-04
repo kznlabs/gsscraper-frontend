@@ -1,68 +1,47 @@
-/* Default styles for larger screens */
-.productTable {
-    border-collapse: collapse;
+.hotshots_list {
+    display: table;
+    border-collapse: separate;
+    border-spacing:0 2em;
     width: 100%;
-    font-size: 12px;
 }
 
-.productTable th, .productTable td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #b7b7b7;
+.hotshots_list .header > * {
+    /*border: 1px solid black;*/
 }
 
-.productTable .productThumbnail img {
-    max-height: 100px;
+.hotshots_list > * {
+    display: table-row;
 }
 
-.hideOnFullWidth {
-    display: none;
+.hotshots_list .row {
+    border-radius:16px;
+    box-shadow: 0px 0px 16px rgba(196, 196, 196, 0.13);
 }
 
-.hideOnMobileWidth {
+.hotshots_list .col {
+    vertical-align: middle;
     display: table-cell;
+    padding: 2em;
+    /*letter-spacing: 1px;*/
+    /*border: 1px solid black;*/
+    background: white;
+    margin: 30px;
 }
 
-.productTable .productName {
-    font-size: 16px;
-    font-weight: 600;
+
+.hotshots_list .col:nth-child(1) {
+    border-radius: 16px 0 0 16px;
 }
 
-@media (max-width: 768px) {
-    .hideOnFullWidth {
-        display: block;
-        font-weight: 600;
-        font-size: 12px;
-    }
+.hotshots_list .col:nth-child(6) {
+    border-radius: 0px 16px 16px 0px;
+}
 
-    .hideOnMobileWidth {
-        display: none !important;
-    }
-    .productTable {
-        display: table;
-    }
+.hotshots_list .col a {
+    padding-left: 6px;
+}
 
-    .productTable thead {
-        display: none;
-    }
-
-    .productTable tr {
-        border-radius: 16px;
-        padding: 16px;
-        border: 1px solid rgb(94, 94, 94);
-        box-shadow: 0 4px 16px rgba(182, 182, 182, 0.45);
-        display: block;
-        margin-bottom: 32px;
-    }
-
-    .productTable td {
-        display: flex;
-        border: none;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .productTable .footer, .productTable .footer .hideOnFullWidth {
-        font-size: 12px;
-    }
+.hotshots_list img {
+    padding: 1em;
+    max-height: 100px;
 }

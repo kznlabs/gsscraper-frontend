@@ -1,5 +1,4 @@
 .pagination {
-    background: #ffffff;
     padding: 16px;
 
     display: flex;
@@ -18,6 +17,9 @@
     align-items: center;
     border-radius: 6px;
     margin: 0 4px;
+
+    background: white;
+    box-shadow: 0 0 16px rgb(220 220 220 / 25%);
 
     padding: 0;
     border: 0;
