@@ -1,18 +1,46 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Quicksand:wght@300;400;500;600;700&display=swap');
 
+:root {
+    --red: rgb(255, 0, 0);
+    --green: rgb(50, 128, 66);
+    --blue: rgb(50, 84, 128);
+
+    --text-color-dark: rgb(50, 50, 50);
+    --text-color-light: rgb(239, 235, 235);
+
+    --background-dark: rgb(45, 45, 45);
+
+    --background-main: rgb(232, 232, 232);
+    --hotshots-background: rgb(255, 255, 255);
+    --hotshots-header-background: rgb(23, 23, 31);
+
+    --border-dark-3: rgba(45, 45, 45, .3);
+    --border-dark-7: rgba(45, 45, 45, .7);
+
+}
+
+.react-tooltip {
+    color: red;
+}
 .wrapper {
+    gap: 32px;
+
     display: flex;
+
     margin-right: auto;
     margin-left: auto;
-    max-width: 1300px;
+
+    max-width: 1440px;
+
     padding-right: 10px;
     padding-left: 10px;
+
     flex-direction: column;
     align-items: center;
 }
 
 body {
-    background: #f5f5f5;
+    background: var(--background-main);
     margin: 0 auto;
     font-family: 'Quicksand', sans-serif;
 }

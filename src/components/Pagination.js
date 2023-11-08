@@ -3,7 +3,7 @@ import styles from '../styles/Pagination.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faAngleRight } from '@fortawesome/fontawesome-free-solid';
 
-function Pagination({ currentPage, totalPageCount, onPageChange }) {
+function Pagination({ currentPage, totalPageCount, setPage }) {
     const canGoBack = currentPage > 1;
     const canGoForward = currentPage < totalPageCount;
 
@@ -28,7 +28,7 @@ function Pagination({ currentPage, totalPageCount, onPageChange }) {
 
     return (
         <div className={styles.pagination}>
-            <button onClick={() => onPageChange(currentPage - 1)} disabled={!canGoBack}>
+            <button className={styles.previous} onClick={() => setPage(currentPage - 1)} disabled={!canGoBack}>
                 <FontAwesomeIcon icon={faAngleLeft} />
             </button>
 
@@ -36,28 +36,25 @@ function Pagination({ currentPage, totalPageCount, onPageChange }) {
                 <button
                     key={page}
                     className={page === currentPage ? styles.activePage : ''}
-                    onClick={() => onPageChange(page)} // Added this onClick handler
+                    onClick={() => setPage(page)} // Added this onClick handler
                 >
                     {page}
                 </button>
             ))}
 
-            <button
-                className=''
-            >
-                ...
-            </button>
+            <button className={styles.spacer}>...</button>
 
             <button
                 key={totalPageCount}
-                className={totalPageCount === currentPage ? styles.lastPage : ''}
-                onClick={() => onPageChange(totalPageCount)} // Added this onClick handler
+                className={styles.maxPages}
+                onClick={() => setPage(totalPageCount)} // Added this onClick handler
+                disabled={!canGoForward}
             >
-                {totalPageCount}
+                Ostatnia (strona {totalPageCount})
             </button>
 
-            <button onClick={() => onPageChange(currentPage + 1)} disabled={!canGoForward}>
-                <FontAwesomeIcon icon={faAngleRight} />
+            <button className={styles.next} onClick={() => setPage(currentPage + 1)} disabled={!canGoForward}>
+                Następna <FontAwesomeIcon icon={faAngleRight} />
             </button>
         </div>
     );

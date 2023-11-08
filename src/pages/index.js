@@ -7,6 +7,7 @@ import Navbar from '../components/Navbar';
 import Hotshot from '../components/Hotshot';
 import Pagination from '../components/Pagination';
 import Table from '../components/Table';
+import Footer from '../components/Footer';
 
 export default function Home() {
     const itemsPerPage = 10;
@@ -39,7 +40,7 @@ export default function Home() {
     return (
         <>
             <Head>
-                <title>gsscraper :: github.com/investintesla/gsscraper</title>
+                <title>Historia gorącego strzału - strona główna</title>
             </Head>
 
             <div className="wrapper">
@@ -47,8 +48,9 @@ export default function Home() {
                 {hotshotData && ( // Render Hotshot only when hotshotData is not null
                     <Hotshot hotshotData={hotshotData} />
                 )}
-                <Pagination currentPage={currentPage} totalPageCount={totalPages} onPageChange={handlePageChange} />
+                <Pagination currentPage={currentPage} totalPageCount={totalPages} setPage={handlePageChange} />
                 <Table data={data} />
+                <Footer />
             </div>
         </>
     );

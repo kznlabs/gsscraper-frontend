@@ -1,12 +1,22 @@
+/* Default styles */
 .hotshots_list {
     display: table;
     border-collapse: separate;
-    border-spacing:0 2em;
     width: 100%;
+    border-spacing: 0 32px;
+}
+
+.hotshots_list .header {
+    background: var(--hotshots-header-background);
+}
+
+.hotshots_list .row .col {
+    background: var(--hotshots-background);
 }
 
 .hotshots_list .header > * {
-    /*border: 1px solid black;*/
+    font-weight: 500;
+    color: var(--text-color-light);
 }
 
 .hotshots_list > * {
@@ -14,34 +24,87 @@
 }
 
 .hotshots_list .row {
-    border-radius:16px;
-    box-shadow: 0px 0px 16px rgba(196, 196, 196, 0.13);
+    border-radius: 16px;
+    box-shadow: 0 0 24px rgba(175, 175, 175, 0.25);
 }
 
 .hotshots_list .col {
     vertical-align: middle;
     display: table-cell;
     padding: 2em;
-    /*letter-spacing: 1px;*/
-    /*border: 1px solid black;*/
-    background: white;
-    margin: 30px;
 }
-
 
 .hotshots_list .col:nth-child(1) {
-    border-radius: 16px 0 0 16px;
+    border-radius: 8px 0 0 8px;
 }
 
-.hotshots_list .col:nth-child(6) {
-    border-radius: 0px 16px 16px 0px;
+.hotshots_list .col:nth-child(5) {
+    border-radius: 0 8px 8px 0;
 }
 
-.hotshots_list .col a {
-    padding-left: 6px;
+.hotshots_list .col .tooltip {
+    /*padding-left: 6px;*/
+}
+
+.hotshots_list .prices, .hotshots_list .amount {
+    /*background: red !important;*/
+    white-space: nowrap;
+    text-align: center;
+}
+
+.hotshots_list .thumbnail {
+    text-align: center;
+}
+
+.hotshots_list .promodate {
+    text-align: right;
 }
 
 .hotshots_list img {
     padding: 1em;
     max-height: 100px;
+}
+
+/* Responsive styles */
+@media (max-width: 1100px) {
+    .hotshots_list .name {
+        font-weight: 500;
+    }
+
+    .hotshots_list .header {
+        display: none;
+    }
+
+    .hotshots_list .row {
+        display: block;
+        border-radius: 32px;
+        background: var(--hotshots-background);
+        box-shadow: 0 0 24px rgba(175, 175, 175, 0.25);
+        margin-bottom: 32px;
+    }
+
+    .hotshots_list .col {
+        display: block;
+        padding: 16px;
+        /*border: 1px solid var(--hotshots-header-background);*/
+    }
+
+    .hotshots_list .col:nth-child(1) {
+        background: var(--hotshots-header-background);
+        color: var(--text-color-light);
+
+        border-radius: 16px;
+    }
+
+    .hotshots_list .col:nth-child(1) a {
+        color: var(--text-color-light);
+    }
+
+    .hotshots_list .col:nth-child(5) {
+    }
+
+    .hotshots_list img {
+        max-width: 100%;
+        height: auto;
+    }
 }

@@ -1,34 +1,94 @@
-.HotshotContainer {
-    width: 100%;
+.currentHotshot {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    width: 100%;
+
+    gap: 32px;
+}
+
+.hotshotHeader .hotshotCloud {
+    position: relative;
+    top: 32px;
+    right: -64px;
+    border-radius: 8px;
+    padding: 16px 32px;
+    color: var(--text-color-light);
+    background: var(--hotshots-header-background);
+}
+
+.hotshotHeader {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.hotshotHeader h3 {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    padding: 32px;
+    border-radius: 24px;
+    gap: 32px;
+    background: white;
+    box-shadow: 0 0 24px rgba(175, 175, 175, 0.25);
+    flex-direction: column;
     align-items: center;
 }
 
-.HotshotContainer img {
-    max-height: 250px;
-}
-
-.HotshotContainer .spacer {
+.container .hotshotInfo {
     width: 100%;
-    height: 16px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    align-items: flex-end;
 }
 
-.HotshotContainer .hotshotinfo {
-    padding: 12px;
+.container .hotshotInfo .hotshotSku {
+    width: 100%;
+    padding-top: 8px;
+    text-align: left;
 }
 
-.HotshotContainer .hotshotprice {
-    font-size: 20px;
-    font-weight: 600;
+.container .hotshotInfo .hotshotPrices .current {
+    font-size: 24px;
 }
 
-@media (max-width: 768px) {
-    .HotshotContainer {
+.container .hotshotInfo .hotshotPrices a {
+    padding-left: 8px;
+    font-size: 16px;
+}
+
+.container .hotshotInfo .hotshotName > a {
+    font-weight: 800;
+    color: black;
+    text-decoration: underline;
+}
+
+.container .hotshotImage {
+    height: 150px;
+}
+
+@media (max-width: 1100px) {
+    .currentHotshot {
         flex-direction: column;
     }
 
-    .HotshotContainer img {
-        max-width: 300px;
+    .hotshotHeader {
+        align-items: center;
+    }
+
+    .hotshotCloud {
+        top: 0 !important;
+        right: 0 !important;
+    }
+
+    .hotshotInfo {
+        align-items: center !important;
     }
 }

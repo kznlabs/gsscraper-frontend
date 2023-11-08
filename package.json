@@ -1,6 +1,6 @@
 {
   "name": "gsscraper-frontend",
-  "version": "23.3010.1",
+  "version": "23.0811.3",
   "description": "Frontend do aplikacji gsscraper (x-kom.pl)",
   "main": "src/pages/index.js",
   "scripts": {
