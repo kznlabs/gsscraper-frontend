@@ -40,8 +40,8 @@ export default function Home() {
     return (
         <>
             <Head>
-                <title>Historia gorącego strzału - strona główna</title>
-                <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" /> 
+                <title>Historia promocji "Gorący Strzał"</title>
+                {/*<meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />*/}
     
             </Head>
 

@@ -19,15 +19,15 @@ function Table({data}) {
             {data.map((product) => (
                 <div className={styles.row} key={product.id}>
                     <div className={[styles.col, styles.name].join(' ')}>
-                        {product.itemName} - <Link href={'https://x-kom.pl/p/' + product.sku}>{product.sku}</Link>
+                        {product.name} - <Link href={'https://x-kom.pl/p/' + product.sku}>{product.sku}</Link>
                     </div>
 
 
                     <div className={[styles.col, styles.prices].join(' ')}>
-                        {product.price} zł<br/>
+                        {product.current} zł<br/>
 
                         <a className={styles.tooltip} data-tooltip-id={'prices-for-' + product.id}
-                           data-tooltip-html={'Cena z ostatnich 30 dni: ' + product.minPrice + ' zł<br>Cena przed obnizką: ' + product.oldPrice + ' zł'}
+                           data-tooltip-html={'Cena z ostatnich 30 dni: ' + product.omnibus + ' zł<br>Cena przed obnizką: ' + product.old + ' zł'}
                         >
 
                             <FontAwesomeIcon icon={faCircleInfo}/>
@@ -41,12 +41,12 @@ function Table({data}) {
                     </div>
 
                     <div className={[styles.col, styles.thumbnail].join(' ')}>
-                        <img src={product.thumbnailUrl}
-                             alt={`Miniaturka Gorącego strzału - ${product.itemName} - ${product.promotionStart}`}/>
+                        <img src={product.image}
+                             alt={`Miniaturka Gorącego strzału - ${product.name} - ${product.start}`}/>
                     </div>
 
                     <div className={[styles.col, styles.promodate].join(' ')}>
-                        {product.promotionStart}
+                        {product.start}
                     </div>
                 </div>
             ))}

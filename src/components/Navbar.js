@@ -4,7 +4,7 @@ import styles from '../styles/Navbar.module.css'; // Import CSS module
 function Navbar() {
     return (
         <div className={styles.navbar}>
-            <h1>GSScraper <sup>v23.0811.3</sup></h1>
+            <h1>Historia promocji "Gorący Strzał"</h1>
         </div>
     );
 }
