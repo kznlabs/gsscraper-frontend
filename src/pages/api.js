@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export const fetchAndFormatData = async (page, itemsPerPage) => {
     try {
-        const response = await axios.get(`http://51.38.131.22:80/list?page=${page}&items_per_page=${itemsPerPage}`);
+        const response = await axios.get(`https://api.purpurmc.pl/list?page=${page}&items_per_page=${itemsPerPage}`);
         const {data: responseData, metadata} = response.data;
 
         const formattedData = responseData.map((product) => ({
