@@ -41,7 +41,7 @@ export default function Home() {
         <>
             <Head>
                 <title>Historia gorącego strzału - strona główna</title>
-                <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+                <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" /> 
     
             </Head>
 
