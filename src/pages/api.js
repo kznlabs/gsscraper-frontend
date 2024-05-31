@@ -8,8 +8,8 @@ export const fetchAndFormatData = async (page, itemsPerPage) => {
 
         const formattedData = responseData.map((product) => ({
             ...product,
-            promotionStart: formatTime(product.promotionStart),
-            promotionEnd: formatTime(product.promotionEnd),
+            start: formatTime(product.start),
+            end: formatTime(product.end),
         }));
 
         return {formattedData, totalPages: metadata.totalPages};
