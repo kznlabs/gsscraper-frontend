@@ -13,14 +13,14 @@ function Hotshot({ hotshotData }) {
             <div className={styles.hotshotHeader}>
                 <div className={styles.hotshotCloud}>
                     <h3>Aktualny gorący strzał:</h3>
-                    {hotshotData.promotionStart}
+                    {hotshotData.start}
                 </div>
             </div>
 
             <div className={styles.container}>
                 <div className={styles.hotshotImage}>
-                    <img className={styles.hotshotImage} src={hotshotData.thumbnailUrl}
-                         alt={`Miniaturka Gorącego strzału - ${hotshotData.itemName} - ${hotshotData.promotionStart}`} />
+                    <img className={styles.hotshotImage} src={hotshotData.image}
+                         alt={`Miniaturka Gorącego strzału - ${hotshotData.name} - ${hotshotData.start}`} />
                 </div>
 
                 <div className={styles.hotshotInfo}>
@@ -29,7 +29,7 @@ function Hotshot({ hotshotData }) {
                               rel="noopener noreferrer"
                               href={'https://x-kom.pl/p/'+hotshotData.sku}
                         >
-                            {hotshotData.itemName}
+                            {hotshotData.name}
                         </Link>
 
                         <div className={styles.hotshotSku}>
@@ -39,11 +39,11 @@ function Hotshot({ hotshotData }) {
 
 
                     <div className={styles.hotshotPrices}>
-                        <span className={styles.current}>{hotshotData.price} zł</span>
+                        <span className={styles.current}>{hotshotData.current} zł</span>
 
                         <a data-tooltip-id="hotshot-price"
-                           data-tooltip-html={'Cena z ostatnich 30 dni: ' + hotshotData.minPrice + ' zł<br>' +
-                               'Cena przed obnizką: ' + hotshotData.oldPrice + ' zł'}
+                           data-tooltip-html={'Cena z ostatnich 30 dni: ' + hotshotData.omnibus + ' zł<br>' +
+                               'Cena przed obnizką: ' + hotshotData.old + ' zł'}
                         >
                             <FontAwesomeIcon icon={faCircleInfo}/>
                         </a>
