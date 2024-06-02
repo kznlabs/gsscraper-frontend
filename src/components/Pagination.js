@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../styles/Pagination.module.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleLeft, faAngleRight } from '@fortawesome/fontawesome-free-solid';
+import {faAngleLeft, faAngleRight} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 function Pagination({ currentPage, totalPageCount, setPage }) {
     const canGoBack = currentPage > 1;
@@ -36,7 +36,7 @@ function Pagination({ currentPage, totalPageCount, setPage }) {
                 <button
                     key={page}
                     className={page === currentPage ? styles.activePage : ''}
-                    onClick={() => setPage(page)} // Added this onClick handler
+                    onClick={() => setPage(page)}
                 >
                     {page}
                 </button>
@@ -47,7 +47,7 @@ function Pagination({ currentPage, totalPageCount, setPage }) {
             <button
                 key={totalPageCount}
                 className={styles.maxPages}
-                onClick={() => setPage(totalPageCount)} // Added this onClick handler
+                onClick={() => setPage(totalPageCount)}
                 disabled={!canGoForward}
             >
                 Ostatnia (strona {totalPageCount})
