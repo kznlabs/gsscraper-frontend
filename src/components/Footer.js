@@ -7,37 +7,37 @@ function Footer() {
         <div className={styles.footer}>
             <Link target="_blank"
                   rel="noopener noreferrer"
-                  href="https://github.com/investintesla/gsscraper">
-                gsscraper
+                  href="https://github.com/kznlabs/x-kom_hotshots_archive">
+                api
             </Link>
 
             <span> & </span>
 
             <Link target="_blank"
                   rel="noopener noreferrer"
-                  href="https://github.com/investintesla/gsscraper-frontend">
-                gsscraper-frontend
+                  href="https://github.com/kznlabs/gsscraper-frontend">
+                frontend
             </Link><br/><br/>
 
             Strona nie używa plików cookies i została wykonana wyłącznie w celach hobbystycznych.<br/>
-            Zdjęcia przedstawione na stronie nie są wykonane przez autora strony.<br/>
+            Zdjęcia przedstawione na stronie nie są wykonane ani przechowywane przez autora strony.<br/>
             Linki do zdjęć jak i inne dane produktów pobierane są z oficjalnej strony&nbsp;
 
             <Link target="_blank"
                   rel="noopener noreferrer"
-                  href="https://github.com/investintesla/gsscraper-frontend">x-kom'u</Link>
+                  href="https://x-kom.pl/goracy_strzal/">x-kom'u</Link>
 
             <br/><br/>
 
             Strona powstała dzięki&nbsp;
 
             <Link target="_blank"
-                  rel="noopener noreferrer" href="https://vercel.com/">vercel.com</Link> - wdrożenie frontendu
+                  rel="noopener noreferrer" href="https://vercel.com/">vercel.com</Link> - hosting front'a
             oraz&nbsp;
 
             <Link target="_blank"
                   rel="noopener noreferrer" href="https://sldc.eu/aff.php?aff=622">sldc.eu (link referencyjny)</Link> -
-            domena & api
+            domena & host api
 
         </div>
     );
