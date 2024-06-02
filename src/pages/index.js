@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { fetchAndFormatData } from './api';
 
 import Head from 'next/head';
-import { Analytics } from "@vercel/analytics/react"
 import Navbar from '../components/Navbar';
 import Hotshot from '../components/Hotshot';
 import Pagination from '../components/Pagination';

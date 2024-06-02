@@ -4,5 +4,7 @@ logs
 .idea/
 .env
 .cache
+pnpm-lock.yaml
+package-lock.json
 gsscraper-frontend.iml
 .vercel
